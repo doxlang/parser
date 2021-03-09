@@ -14,15 +14,15 @@ static int doxreader_chars_peek(doxreader_t *r) {
 
 
 static int doxreader_chars_get(doxreader_t *r) {
-   doxreader_char_t *self = (doxreader_chars_t *)r->ptr;
+   doxreader_chars_t *self = (doxreader_chars_t *)r->ptr;
    int c = self->text[self->pos];
    if (c != '\0') self->pos++;
    return c;
 }
 
 
-static doxreader_chars_isend(doxreader_t *r) {
-   doxreader_char_t * self = (doxreader_chars_t *)->ptr;
+static int doxreader_chars_isend(doxreader_t *r) {
+   doxreader_chars_t * self = (doxreader_chars_t *)r->ptr;
    return self->text[self->pos] == '\0';
 }
 
