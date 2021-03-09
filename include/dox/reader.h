@@ -23,6 +23,8 @@ typedef struct doxreader {
    doxreader_kind_t kind;
    void *ptr;
    int (* peek)(struct doxreader *);
+   int (* get)(struct doxreader *);
+   int (* isend)(struct doxreader *);
 } doxreader_t;
 
 
